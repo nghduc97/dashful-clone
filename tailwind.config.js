@@ -1,6 +1,10 @@
 module.exports = {
   theme: {
-    extend: {},
+    extend: {
+      opacity: {
+        '65': '0.65',
+      }
+    },
   },
   variants: {},
   plugins: [],
