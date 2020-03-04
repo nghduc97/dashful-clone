@@ -1,6 +1,8 @@
+import WidgetCard from '../components/widget-card';
+
 function IndexPage(props) {
   return (
-    <div>
+    <div className="text-gray-900">
       <nav className="py-1 flex items-center bg-purple-600 text-white">
         <button className="ml-4 p-2 text-xl opacity-65" type="button">☰</button>
         <h1 className="ml-4">
@@ -27,8 +29,237 @@ function IndexPage(props) {
         </section>
         <section className="pt-16 bg-gray-100">
           <h3 className="text-center text-3xl text-teal-900 font-medium">Widget</h3>
-          <p className="mt-16 mx-4 text-center text-lg leading-relaxed text-gray-600">You can find several widgets with connections to web services like YouTube or MailChimp or get creative with custom ones.</p>
+          <p className="mx-4 mt-16 text-center text-lg leading-relaxed text-gray-600">You can find several widgets with connections to web services like YouTube or MailChimp or get creative with custom ones.</p>
+          <nav className="mx-4 mt-16 flex flex-row flex-wrap justify-center">
+            <button className="px-3 py-1 rounded whitespace-no-wrap uppercase text-gray-600 font-bold text-xs bg-gray-300">All</button>
+            <button className="px-3 py-1 rounded whitespace-no-wrap uppercase text-gray-600 font-bold text-xs">Social Media</button>
+            <button className="px-3 py-1 rounded whitespace-no-wrap uppercase text-gray-600 font-bold text-xs">Time Management</button>
+            <button className="px-3 py-1 rounded whitespace-no-wrap uppercase text-gray-600 font-bold text-xs">Custom</button>
+            <button className="px-3 py-1 rounded whitespace-no-wrap uppercase text-gray-600 font-bold text-xs">Other</button>
+          </nav>
+          <div className="mt-8 pb-16 mx-2 grid grid-cols-2 gap-2">
+            <WidgetCard
+              imgLink="https://dashful.co/assets/img/widgets/youtube.png"
+              title="YouTube"
+              description="Track the number of your subscribers or total views."
+            />
+            <WidgetCard
+              imgLink="https://dashful.co/assets/img/widgets/twitter-followers.png"
+              title="Twitter"
+              description="Track the number of your followers."
+            />
+            <WidgetCard
+              imgLink="https://dashful.co/assets/img/widgets/custom-api.png"
+              title="Custom API"
+              description="Hook up your custom API endpoint."
+            />
+            <WidgetCard
+              imgLink="https://dashful.co/assets/img/widgets/intercom-total.png"
+              title="Intercom"
+              description="Track the total number of your users, tags and others."
+            />
+            <WidgetCard
+              imgLink="https://dashful.co/assets/img/widgets/twitch-followers.png"
+              title="Twitch"
+              description="Track the number of your followers."
+            />
+            <WidgetCard
+              imgLink="https://dashful.co/assets/img/widgets/cryptocurrency-price.png"
+              title="Cryptocurrency Price"
+              description="Track the price of any cryptocurrency."
+            />
+            <WidgetCard
+              imgLink="https://dashful.co/assets/img/widgets/mailchimp.png"
+              title="MailChimp"
+              description="Track the number of subscribers of your list."
+            />
+            <WidgetCard
+              imgLink="https://dashful.co/assets/img/widgets/intercom-conversations.png"
+              title="Intercom"
+              description="Track the number of your conversations."
+            />
+            <WidgetCard
+              imgLink="https://dashful.co/assets/img/widgets/today.png"
+              title="Today"
+              description="Shows you current date, time and weather."
+            />
+            <WidgetCard
+              imgLink="https://dashful.co/assets/img/widgets/countdown.png"
+              title="Countdown"
+              description="Track the time left to your vacation or that scary deadline."
+            />
+            <WidgetCard
+              imgLink="https://dashful.co/assets/img/widgets/twitch-views.png"
+              title="Twitch"
+              description="Track the number of your total views."
+            />
+            <WidgetCard
+              imgLink="https://dashful.co/assets/img/widgets/unsplash-followers.png"
+              title="Unsplash Followers"
+              description="Track the number of your followers or downloads."
+            />
+            <WidgetCard
+              imgLink="https://dashful.co/assets/img/widgets/unsplash-downloads.png"
+              title="Unsplash Downloads"
+              description="Track the number of your followers or downloads."
+            />
+            <WidgetCard
+              imgLink="https://dashful.co/assets/img/widgets/dribbble.png"
+              title="Dribbble"
+              description="Track the number of your followers."
+            />
+            <WidgetCard
+              imgLink="https://dashful.co/assets/img/widgets/producthunt.png"
+              title="Product Hunt"
+              description="Track the number of your Product Hunt post upvotes."
+            />
+            <WidgetCard
+              imgLink="https://dashful.co/assets/img/widgets/twitter-likes-retweets.png"
+              title="Twitter"
+              description="Track the number of likes and retweets of your recent tweet."
+            />
+            <WidgetCard
+              imgLink="https://dashful.co/assets/img/widgets/year-progress.png"
+              title="Year Progress"
+              description="Track the progress of the current year."
+            />
+            <WidgetCard
+              imgLink="https://dashful.co/assets/img/widgets/static-kpi.png"
+              title="Static KPI"
+              description="For KPIs without API."
+            />
+            <WidgetCard
+              imgLink="https://dashful.co/assets/img/widgets/image.png"
+              title="Image"
+              description="A place to put your image."
+            />
+            <WidgetCard
+              imgLink="https://dashful.co/assets/img/widgets/logo.png"
+              title="Logo"
+              description="A place to put your shiny logo."
+            />
+            <WidgetCard
+              imgLink="https://dashful.co/assets/img/widgets/iframe.png"
+              title="<iframe>"
+              description="Embed a YouTube video or any other external resource."
+            />
+            <WidgetCard
+              imgLink="https://dashful.co/assets/img/widgets/more-coming-soon.png"
+              title="More widgets"
+              description="More widgets coming soon."
+            />
+          </div>
         </section>
+        <section className="py-16">
+          <h3 className="text-center text-3xl text-teal-900 font-medium">Features</h3>
+          <div className="mt-16">
+            <h4 className="ml-4 font-medium text-2xl text-gray-700">Public dashboards</h4>
+            <p className="mx-4 mt-2 text-sm text-gray-600">All dashboards are public by default. Share them with your colleagues, friends or the whole internet.</p>
+            <div className="px-4">
+              <img className="mt-12 rounded" src="https://dashful.co/assets/img/features/public-dashboard.png"></img>
+            </div>
+          </div>
+          <div className="mt-32">
+            <h4 className="ml-4 font-medium text-2xl text-gray-700">Private dashboards</h4>
+            <p className="mx-4 mt-2 text-sm text-gray-600">You can make your dashboards private by protecting them with password.</p>
+            <div className="px-4">
+              <img className="mt-12 rounded" src="https://dashful.co/assets/img/features/private-dashboard.png"></img>
+            </div>
+          </div>
+          <div className="mt-32">
+            <h4 className="ml-4 font-medium text-2xl text-gray-700">Dashboard Builder</h4>
+            <p className="mx-4 mt-2 text-sm text-gray-600">Build and customize your dashboards with a simple to use builder. Change the number of rows & cols. Resize and arrange the widgets with drag and drop.</p>
+            <div className="px-4">
+              <img className="mt-12 rounded" src="https://dashful.co/assets/img/features/editor.png"></img>
+            </div>
+          </div>
+          <div className="mt-32">
+            <h4 className="ml-4 font-medium text-2xl text-gray-700">Themes</h4>
+            <p className="mx-4 mt-2 text-sm text-gray-600">You can choose from a number of dashboard themes.</p>
+            <div className="px-4">
+              <img className="mt-12 rounded" src="https://dashful.co/assets/img/features/themes.png"></img>
+            </div>
+          </div>
+          <div className="mt-32">
+            <h4 className="ml-4 font-medium text-2xl text-gray-700">Custom dashboard backgrounds</h4>
+            <p className="mx-4 mt-2 text-sm text-gray-600">Choose a custom background image for your dashboard.</p>
+            <div className="px-4">
+              <img className="mt-12 rounded" src="https://dashful.co/assets/img/features/custom-background.png"></img>
+            </div>
+          </div>
+          <div className="mt-32">
+            <h4 className="ml-4 font-medium text-2xl text-gray-700">Responsive Design</h4>
+            <p className="mx-4 mt-2 text-sm text-gray-600">Dashboards adapt to any window or screen sizes so they can look good on any device. Be it your computer, phone, tablet or a TV.</p>
+            <div className="px-4">
+              <img className="mt-12 rounded" src="https://dashful.co/assets/img/features/iphone.png"></img>
+            </div>
+          </div>
+        </section>
+        <section className="px-4 py-16 bg-gray-100 text-center">
+          <h3 className="text-3xl font-medium">Roadmap</h3>
+          <p className="mt-4 text-gray-700">Coming soon...</p>
+
+          <h5 className="mt-16 text-lg font-semibold opacity-65">Custom Domains</h5>
+          <p className="text-sm">Host your dashboards on custom domains.</p>
+
+          <h5 className="mt-16 text-lg font-semibold opacity-65">Email &amp; Slack Reports</h5>
+          <p className="text-sm">Get dashboard snapshots into your mailbox or Slack channel.</p>
+
+          <h5 className="mt-16 text-lg font-semibold opacity-65">Historical Data</h5>
+          <p className="text-sm">Check data from the past and see how you've grown.</p>
+
+          <h5 className="mt-16 text-lg font-semibold opacity-65">API Access</h5>
+          <p className="text-sm">Get data presented in your dashboards in JSON format via API.</p>
+
+          <h5 className="mt-16 text-lg font-semibold opacity-65">More Integrations</h5>
+          <p className="text-sm">Widgets with connections to web services like Google Analytics, Stripe, <s>Intercom</s> and others.</p>
+
+          <h5 className="mt-16 text-lg font-semibold opacity-65">More Widgets</h5>
+          <p className="text-sm">World time, <s>iframe</s>, <s>rich text notes</s>, ...</p>
+        </section>
+        <section className="px-4 pt-16 pb-24 text-center">
+          <h2 className="text-3xl font-medium">What customers say about us</h2>
+
+          <p className="mt-24 px-4 text-lg text-gray-600 leading-relaxed">&ldquo; Dashful has been an incredible addition to our toolset. By constantly using it to monitor our indicators it has allowed us to swiftly react to any sudden changes in all areas of our business. &rdquo;</p>
+          <p className="mt-4 text-sm text-gray-600">
+            - Fermin Rodriguez P. - <a href="https://lookea.me" target="new"><strong>lookea.me</strong></a>
+          </p>
+
+          <p className="mt-16 px-4 text-lg text-gray-600 leading-relaxed">&ldquo; Dashful makes it very easy to build new dashboards for our projects. The product allows us to concentrate on what matters: extract meaningful insights for our team - and the product support is outstanding! &rdquo;</p>
+          <p className="mt-4 text-sm text-gray-600">
+            - Carlos Martinez - <a href="https://www.wizeline.com/" target="new"><strong>wizeline.com</strong></a>
+          </p>
+        </section>
+        <section className="px-4 py-16 bg-gray-100">
+          <h2 className="text-3xl font-medium text-center">Try it yourself. No account required!</h2>
+          <div className="mt-24 flex justify-center">
+            <a className="ml-4 mt-6 px-6 py-2 inline-block rounded-full bg-purple-600 text-white uppercase" href="https://dashful.co/admin/dashboard/new">
+              Start Building Dashboard
+            </a>
+          </div>
+        </section>
+        <section className="px-4 py-20">
+          <p className="text-gray-600 text-center">Subscribe to newsletter and receive the latest news.</p>
+          <input
+            className="mt-4 pl-4 py-2 w-full rounded-full border border-gray-200"
+            placeholder="Email Address"
+          ></input>
+        </section>
+        <section className="px-4 py-16 bg-gray-100 text-center">
+          <h2 className="text-3xl font-medium">Who made this?</h2>
+          <p className="mt-24 px-4 text-lg text-gray-600 leading-relaxed">I'm a solo developer and I made this to "scratch my own itch". I've worked on this for months and months and I love ❤️ to see what you're creating with this platform. Thank you for your support!</p>
+          <p className="mt-12 text-sm text-gray-600">
+            Adam - <a href="https://twitter.com/bardonadam">Twitter</a>
+          </p>
+        </section>
+        <footer className="px-4 py-8 bg-gray-900 text-white">
+          <img className="" src="https://dashful.co/assets/img/logo.png" alt="logo" width="100" height="30"></img>
+          <p className="mt-4 text-sm">A platform to create beautiful and customizable dashboards.</p>
+          <hr className="mt-8 border-gray-700 opacity-75" />
+          <div className="mt-8 grid grid-cols-2">
+            <a className="" href="/">Home</a>
+          </div>
+        </footer>
       </main>
     </div>
   );
