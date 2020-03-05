@@ -1,10 +1,17 @@
+import { useState } from 'react';
 import WidgetCard from '../components/widget-card';
 
 function IndexPage(props) {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <div className="text-gray-900">
+      <div className={`w-screen h-screen flex flex-row fixed z-40 ${menuOpen ? '' : 'hidden'}`}>
+        <div className="bg-purple-600 w-5/6">abc</div>
+        <button onClick={() => setMenuOpen(false)} className="w-1/6 bg-white opacity-95"></button>
+      </div>
       <nav className="py-1 flex items-center bg-purple-600 text-white">
-        <button className="ml-4 p-2 text-xl opacity-65" type="button">☰</button>
+        <button onClick={() => setMenuOpen(true)} className="ml-4 p-2 text-xl opacity-65" type="button">☰</button>
         <h1 className="ml-4">
           <img className="" src="https://dashful.co/assets/img/logo.png" alt="logo" width="100" height="30"></img>
         </h1>
@@ -24,11 +31,11 @@ function IndexPage(props) {
       </header>
       <main>
         <section className="pb-12">
-          <h3 className="mx-8 my-12 text-center text-3xl text-teal-900 font-medium">Watch Dashful in action</h3>
+          <h2 className="mx-8 my-12 text-center text-3xl text-teal-900 font-medium">Watch Dashful in action</h2>
           <iframe className="w-full" src="https://www.youtube.com/embed/D37RXZsdVm8" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
         </section>
-        <section className="pt-16 bg-gray-100">
-          <h3 className="text-center text-3xl text-teal-900 font-medium">Widget</h3>
+        <section id="widgets" className="pt-16 bg-gray-100">
+          <h2 className="text-center text-3xl text-teal-900 font-medium">Widget</h2>
           <p className="mx-4 mt-16 text-center text-lg leading-relaxed text-gray-600">You can find several widgets with connections to web services like YouTube or MailChimp or get creative with custom ones.</p>
           <nav className="mx-4 mt-16 flex flex-row flex-wrap justify-center">
             <button className="px-3 py-1 rounded whitespace-no-wrap uppercase text-gray-600 font-bold text-xs bg-gray-300">All</button>
@@ -150,8 +157,8 @@ function IndexPage(props) {
             />
           </div>
         </section>
-        <section className="py-16">
-          <h3 className="text-center text-3xl text-teal-900 font-medium">Features</h3>
+        <section id="features" className="py-16">
+          <h2 className="text-center text-3xl text-teal-900 font-medium">Features</h2>
           <div className="mt-16">
             <h4 className="ml-4 font-medium text-2xl text-gray-700">Public dashboards</h4>
             <p className="mx-4 mt-2 text-sm text-gray-600">All dashboards are public by default. Share them with your colleagues, friends or the whole internet.</p>
@@ -195,8 +202,8 @@ function IndexPage(props) {
             </div>
           </div>
         </section>
-        <section className="px-4 py-16 bg-gray-100 text-center">
-          <h3 className="text-3xl font-medium">Roadmap</h3>
+        <section id="roadmap" className="px-4 py-16 bg-gray-100 text-center">
+          <h2 className="text-3xl font-medium">Roadmap</h2>
           <p className="mt-4 text-gray-700">Coming soon...</p>
 
           <h5 className="mt-16 text-lg font-semibold opacity-65">Custom Domains</h5>
@@ -240,10 +247,10 @@ function IndexPage(props) {
         </section>
         <section className="px-4 py-20">
           <p className="text-gray-600 text-center">Subscribe to newsletter and receive the latest news.</p>
-          <input
-            className="mt-4 pl-4 py-2 w-full rounded-full border border-gray-200"
-            placeholder="Email Address"
-          ></input>
+          <div className="mt-4 flex flex-row relative">
+            <input className="pl-4 py-2 rounded-l-full border border-r-0 border-gray-200" placeholder="Email Address"></input>
+            <button className="px-6 py-2 h-full absolute right-0 rounded-full bg-purple-600 align-middle text-white text-sm font-semibold tracking-wider uppercase leading-none">Subscribe</button>
+          </div>
         </section>
         <section className="px-4 py-16 bg-gray-100 text-center">
           <h2 className="text-3xl font-medium">Who made this?</h2>
@@ -252,12 +259,28 @@ function IndexPage(props) {
             Adam - <a href="https://twitter.com/bardonadam">Twitter</a>
           </p>
         </section>
-        <footer className="px-4 py-8 bg-gray-900 text-white">
+        <footer className="px-4 pt-8 pb-12 bg-gray-900 text-white">
           <img className="" src="https://dashful.co/assets/img/logo.png" alt="logo" width="100" height="30"></img>
           <p className="mt-4 text-sm">A platform to create beautiful and customizable dashboards.</p>
           <hr className="mt-8 border-gray-700 opacity-75" />
-          <div className="mt-8 grid grid-cols-2">
-            <a className="" href="/">Home</a>
+          <div className="mt-8 w-2/3 grid grid-cols-2 row-gap-2 text-sm text-gray-400">
+            <a href="https://dashful.co/">Home</a>
+            <a href="#widgets">Widgets</a>
+            <a href="https://demo.dashful.co">Live Demo</a>
+            <a href="#features">Features</a>
+            <a href="https://dashful.co/changelog">Changelog</a>
+            <a href="#roadmap">Roadmap</a>
+            <a href="https://dashful.co/terms">Terms</a>
+            <a href="https://dashful.co/credits">Credits</a>
+            <a href="https://dashful.co/privacy">Privacy</a>
+            <a href="https://dashful.co/pricing">Pricing</a>
+          </div>
+          <div className="mt-8">
+            <h6>Get Started</h6>
+            <p className="mt-2 text-sm text-gray-400 leading-relaxed">No account required unless you want to ​​​​​​​save your dashboard.</p>
+            <a className="mt-3 px-6 py-2 inline-block rounded-full bg-purple-600 text-white" href="https://dashful.co/admin/dashboard/new">
+              <span className="font-medium">BUILD DASHBOARD</span>
+            </a>
           </div>
         </footer>
       </main>

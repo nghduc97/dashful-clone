@@ -1,6 +1,6 @@
 function WidgetCard(prop: WidgetCardProp) {
   return (
-    <div className="flex flex-col rounded-lg shadow bg-white">
+    <div className="rounded-lg shadow bg-white">
       <img className="object-contain rounded-t-lg" src={prop.imgLink}></img>
       <div className="p-4 rounded-b-lg">
         <h6 className="font-bold">{prop.title}</h6>
