@@ -11,20 +11,26 @@ function IndexPage(props) {
         <button onClick={() => setMenuOpen(false)} className="w-1/6 bg-white opacity-95"></button>
       </div>
       <nav className="py-1 flex items-center bg-purple-600 text-white">
-        <button onClick={() => setMenuOpen(true)} className="ml-4 p-2 text-xl opacity-65" type="button">☰</button>
+        <button onClick={() => setMenuOpen(true)} className="ml-4 sm:ml-8 p-2 text-xl opacity-65" type="button">☰</button>
         <h1 className="ml-4">
-          <img className="" src="https://dashful.co/assets/img/logo.png" alt="logo" width="100" height="30"></img>
+          <img className="ml-1" src="https://dashful.co/assets/img/logo.png" alt="logo" width="100" height="30"></img>
         </h1>
       </nav>
       <header className="pt-24 h-screen bg-purple-600 text-white">
-        <h2 className="ml-4 font-semibold leading-10 text-3xl">Create Beautiful Dashboards</h2>
-        <p className="ml-4 mt-5 font-light leading-relaxed text-lg overflow-visible">Get timely information about things that matter to you at a glance.</p>
-        <a className="ml-4 mt-6 px-6 py-2 inline-block rounded-full bg-white text-purple-600" href="https://dashful.co/admin/dashboard/new">
-          <span className="font-medium">BUILD DASHBOARD</span>
+        <h2 className="ml-4 sm:ml-10 sm:w-2/3 font-medium leading-10 sm:leading-tight text-4xl sm:text-4.5xl">Create Beautiful Dashboards</h2>
+        <p className="ml-4 sm:ml-10 mt-5 w-2/3 sm:w-5/6 sm:text-lg font-thin leading-relaxed overflow-visible">Get timely information about things that matter to you at a glance.</p>
+        <a className="ml-4 sm:ml-10 mt-6 pl-6 py-2 inline-block rounded-full bg-white text-purple-600" href="#">
+          <span className="font-medium tracking-widest text-xs">BUILD DASHBOARD</span>
+          <svg className="ml-4 mr-2 inline-block relative right-0" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 512 512">
+            <title>ionicons-v5-a</title>
+            <polyline className="stroke-current" points="262.62 336 342 256 262.62 176" style={{fill:'none',strokeLinecap:'round',strokeLinejoin:'round',strokeWidth:'48px'}}/>
+            <line className="stroke-current" x1="330.97" y1="256" x2="170" y2="256" style={{fill:'none',strokeLinecap:'round',strokeLinejoin:'round',strokeWidth:'48px'}}/>
+            <path className="stroke-current" d="M256,448c106,0,192-86,192-192S362,64,256,64,64,150,64,256,150,448,256,448Z" style={{fill:'none',strokeMiterlimit:10,strokeWidth:'42px'}}/>
+          </svg>
         </a>
-        <p className="ml-12 mt-4 text-sm">No account required</p>
+        <p className="ml-12 sm:ml-20 mt-4 text-sm">No account required</p>
         <div className="mt-2 flex justify-center">
-          <a href="https://demo.dashful.co/" target="_blank" className="w-9/10">
+          <a href="#" target="_blank" className="w-9/10">
             <img src="https://dashful.co/assets/img/dashboard-hero.png"></img>
           </a>
         </div>
@@ -44,7 +50,7 @@ function IndexPage(props) {
             <button className="px-3 py-1 rounded whitespace-no-wrap uppercase text-gray-600 font-bold text-xs">Custom</button>
             <button className="px-3 py-1 rounded whitespace-no-wrap uppercase text-gray-600 font-bold text-xs">Other</button>
           </nav>
-          <div className="mt-8 pb-16 mx-2 grid grid-cols-2 gap-2">
+          <div className="mt-8 pb-16 mx-2 sm:mx-auto sm:max-w-2xl grid grid-cols-2 gap-2 sm:gap-4">
             <WidgetCard
               imgLink="https://dashful.co/assets/img/widgets/youtube.png"
               title="YouTube"
@@ -229,18 +235,18 @@ function IndexPage(props) {
 
           <p className="mt-24 px-4 text-lg text-gray-600 leading-relaxed">&ldquo; Dashful has been an incredible addition to our toolset. By constantly using it to monitor our indicators it has allowed us to swiftly react to any sudden changes in all areas of our business. &rdquo;</p>
           <p className="mt-4 text-sm text-gray-600">
-            - Fermin Rodriguez P. - <a href="https://lookea.me" target="new"><strong>lookea.me</strong></a>
+            - Fermin Rodriguez P. - <a href="#" target="new"><strong>lookea.me</strong></a>
           </p>
 
           <p className="mt-16 px-4 text-lg text-gray-600 leading-relaxed">&ldquo; Dashful makes it very easy to build new dashboards for our projects. The product allows us to concentrate on what matters: extract meaningful insights for our team - and the product support is outstanding! &rdquo;</p>
           <p className="mt-4 text-sm text-gray-600">
-            - Carlos Martinez - <a href="https://www.wizeline.com/" target="new"><strong>wizeline.com</strong></a>
+            - Carlos Martinez - <a href="#" target="new"><strong>wizeline.com</strong></a>
           </p>
         </section>
         <section className="px-4 py-16 bg-gray-100">
           <h2 className="text-3xl font-medium text-center">Try it yourself. No account required!</h2>
           <div className="mt-24 flex justify-center">
-            <a className="ml-4 mt-6 px-6 py-2 inline-block rounded-full bg-purple-600 text-white uppercase" href="https://dashful.co/admin/dashboard/new">
+            <a className="ml-4 mt-6 px-6 py-2 inline-block rounded-full bg-purple-600 text-white uppercase" href="#">
               Start Building Dashboard
             </a>
           </div>
@@ -256,7 +262,7 @@ function IndexPage(props) {
           <h2 className="text-3xl font-medium">Who made this?</h2>
           <p className="mt-24 px-4 text-lg text-gray-600 leading-relaxed">I'm a solo developer and I made this to "scratch my own itch". I've worked on this for months and months and I love ❤️ to see what you're creating with this platform. Thank you for your support!</p>
           <p className="mt-12 text-sm text-gray-600">
-            Adam - <a href="https://twitter.com/bardonadam">Twitter</a>
+            Adam - <a href="#">Twitter</a>
           </p>
         </section>
         <footer className="px-4 pt-8 pb-12 bg-gray-900 text-white">
@@ -264,22 +270,28 @@ function IndexPage(props) {
           <p className="mt-4 text-sm">A platform to create beautiful and customizable dashboards.</p>
           <hr className="mt-8 border-gray-700 opacity-75" />
           <div className="mt-8 w-2/3 grid grid-cols-2 row-gap-2 text-sm text-gray-400">
-            <a href="https://dashful.co/">Home</a>
+            <a href="#">Home</a>
             <a href="#widgets">Widgets</a>
-            <a href="https://demo.dashful.co">Live Demo</a>
+            <a href="#">Live Demo</a>
             <a href="#features">Features</a>
-            <a href="https://dashful.co/changelog">Changelog</a>
+            <a href="#">Changelog</a>
             <a href="#roadmap">Roadmap</a>
-            <a href="https://dashful.co/terms">Terms</a>
-            <a href="https://dashful.co/credits">Credits</a>
-            <a href="https://dashful.co/privacy">Privacy</a>
-            <a href="https://dashful.co/pricing">Pricing</a>
+            <a href="#">Terms</a>
+            <a href="#">Credits</a>
+            <a href="#">Privacy</a>
+            <a href="#">Pricing</a>
           </div>
           <div className="mt-8">
             <h6>Get Started</h6>
             <p className="mt-2 text-sm text-gray-400 leading-relaxed">No account required unless you want to ​​​​​​​save your dashboard.</p>
-            <a className="mt-3 px-6 py-2 inline-block rounded-full bg-purple-600 text-white" href="https://dashful.co/admin/dashboard/new">
-              <span className="font-medium">BUILD DASHBOARD</span>
+            <a className="mt-3 pl-6 py-2 inline-block rounded-full bg-purple-600 text-white" href="#">
+              <span className="font-medium tracking-widest text-xs">BUILD DASHBOARD</span>
+              <svg className="ml-4 mr-2 inline-block relative right-0" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 512 512">
+                <title>ionicons-v5-a</title>
+                <polyline className="stroke-current" points="262.62 336 342 256 262.62 176" style={{fill:'none',strokeLinecap:'round',strokeLinejoin:'round',strokeWidth:'48px'}}/>
+                <line className="stroke-current" x1="330.97" y1="256" x2="170" y2="256" style={{fill:'none',strokeLinecap:'round',strokeLinejoin:'round',strokeWidth:'48px'}}/>
+                <path className="stroke-current" d="M256,448c106,0,192-86,192-192S362,64,256,64,64,150,64,256,150,448,256,448Z" style={{fill:'none',strokeMiterlimit:10,strokeWidth:'42px'}}/>
+              </svg>
             </a>
           </div>
         </footer>
