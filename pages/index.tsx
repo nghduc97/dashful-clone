@@ -37,11 +37,11 @@ function IndexPage(props) {
       </header>
       <main>
         <section className="pb-12">
-          <h2 className="mx-8 my-12 text-center text-3xl text-teal-900 font-medium">Watch Dashful in action</h2>
+          <h2 className="mx-8 my-12 text-center text-3xl sm:text-4xl text-teal-900 font-medium">Watch Dashful in action</h2>
           <iframe className="w-full" src="https://www.youtube.com/embed/D37RXZsdVm8" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
         </section>
         <section id="widgets" className="pt-16 bg-gray-100">
-          <h2 className="text-center text-3xl text-teal-900 font-medium">Widget</h2>
+          <h2 className="text-center text-3xl sm:text-4xl text-teal-900 font-medium">Widget</h2>
           <p className="mx-4 mt-16 text-center text-lg leading-relaxed text-gray-600">You can find several widgets with connections to web services like YouTube or MailChimp or get creative with custom ones.</p>
           <nav className="mx-4 mt-16 flex flex-row flex-wrap justify-center">
             <button className="px-3 py-1 rounded whitespace-no-wrap uppercase text-gray-600 font-bold text-xs bg-gray-300">All</button>
@@ -164,102 +164,134 @@ function IndexPage(props) {
           </div>
         </section>
         <section id="features" className="py-16">
-          <h2 className="text-center text-3xl text-teal-900 font-medium">Features</h2>
-          <div className="mt-16">
-            <h4 className="ml-4 font-medium text-2xl text-gray-700">Public dashboards</h4>
-            <p className="mx-4 mt-2 text-sm text-gray-600">All dashboards are public by default. Share them with your colleagues, friends or the whole internet.</p>
-            <div className="px-4">
-              <img className="mt-12 rounded" src="https://dashful.co/assets/img/features/public-dashboard.png"></img>
+          <h2 className="text-center text-3xl sm:text-4xl text-teal-900 font-medium">Features</h2>
+          <div className="mt-16 sm:mt-4 sm:flex sm:flex-row sm:items-center">
+            <div className="sm:order-last sm:pr-4">
+              <h4 className="ml-4 font-medium text-2xl text-gray-700">Public dashboards</h4>
+              <p className="mx-4 mt-2 text-sm sm:text-base text-gray-600">All dashboards are public by default. Share them with your colleagues, friends or the whole internet.</p>
+            </div>
+            <div className="px-4 sm:pl-8">
+              <img className="mt-12 sm:w-216 rounded" src="https://dashful.co/assets/img/features/public-dashboard.png"></img>
             </div>
           </div>
-          <div className="mt-32">
-            <h4 className="ml-4 font-medium text-2xl text-gray-700">Private dashboards</h4>
-            <p className="mx-4 mt-2 text-sm text-gray-600">You can make your dashboards private by protecting them with password.</p>
-            <div className="px-4">
-              <img className="mt-12 rounded" src="https://dashful.co/assets/img/features/private-dashboard.png"></img>
+          <div className="mt-32 sm:flex sm:flex-row sm:items-center">
+            <div className="sm:pl-4">
+              <h4 className="ml-4 font-medium text-2xl text-gray-700">Private dashboards</h4>
+              <p className="mx-4 sm:mr-0 mt-2 text-sm sm:text-base text-gray-600">You can make your dashboards private by protecting them with password.</p>
+            </div>
+            <div className="px-4 sm:pr-8">
+              <img className="mt-12 sm:w-176 rounded" src="https://dashful.co/assets/img/features/private-dashboard.png"></img>
             </div>
           </div>
-          <div className="mt-32">
-            <h4 className="ml-4 font-medium text-2xl text-gray-700">Dashboard Builder</h4>
-            <p className="mx-4 mt-2 text-sm text-gray-600">Build and customize your dashboards with a simple to use builder. Change the number of rows & cols. Resize and arrange the widgets with drag and drop.</p>
-            <div className="px-4">
-              <img className="mt-12 rounded" src="https://dashful.co/assets/img/features/editor.png"></img>
+          <div className="mt-32 sm:flex sm:flex-row sm:items-center">
+            <div className="sm:order-last sm:pr-4">
+              <h4 className="ml-4 font-medium text-2xl text-gray-700">Dashboard Builder</h4>
+              <p className="mx-4 mt-2 text-sm sm:text-base text-gray-600">Build and customize your dashboards with a simple to use builder. Change the number of rows & cols. Resize and arrange the widgets with drag and drop.</p>
+            </div>
+            <div className="px-4 sm:pl-8">
+              <img className="mt-12 sm:w-216 rounded" src="https://dashful.co/assets/img/features/editor.png"></img>
             </div>
           </div>
-          <div className="mt-32">
-            <h4 className="ml-4 font-medium text-2xl text-gray-700">Themes</h4>
-            <p className="mx-4 mt-2 text-sm text-gray-600">You can choose from a number of dashboard themes.</p>
-            <div className="px-4">
-              <img className="mt-12 rounded" src="https://dashful.co/assets/img/features/themes.png"></img>
+          <div className="mt-32 sm:flex sm:flex-row sm:items-center">
+            <div className="sm:pl-4">
+              <h4 className="ml-4 font-medium text-2xl text-gray-700">Themes</h4>
+              <p className="mx-4 sm:mr-0 mt-2 text-sm sm:text-base text-gray-600">You can choose from a number of dashboard themes.</p>
+            </div>
+            <div className="px-4 sm:pr-8">
+              <img className="mt-12 sm:w-176 rounded" src="https://dashful.co/assets/img/features/themes.png"></img>
             </div>
           </div>
-          <div className="mt-32">
-            <h4 className="ml-4 font-medium text-2xl text-gray-700">Custom dashboard backgrounds</h4>
-            <p className="mx-4 mt-2 text-sm text-gray-600">Choose a custom background image for your dashboard.</p>
-            <div className="px-4">
-              <img className="mt-12 rounded" src="https://dashful.co/assets/img/features/custom-background.png"></img>
+          <div className="mt-32 sm:flex sm:flex-row sm:items-center">
+            <div className="sm:order-last sm:pr-4">
+              <h4 className="ml-4 font-medium text-2xl text-gray-700">Custom dashboard backgrounds</h4>
+              <p className="mx-4 mt-2 text-sm sm:text-base text-gray-600">Choose a custom background image for your dashboard.</p>
+            </div>
+            <div className="px-4 sm:pl-8">
+              <img className="mt-12 sm:w-216 rounded" src="https://dashful.co/assets/img/features/custom-background.png"></img>
             </div>
           </div>
-          <div className="mt-32">
-            <h4 className="ml-4 font-medium text-2xl text-gray-700">Responsive Design</h4>
-            <p className="mx-4 mt-2 text-sm text-gray-600">Dashboards adapt to any window or screen sizes so they can look good on any device. Be it your computer, phone, tablet or a TV.</p>
-            <div className="px-4">
-              <img className="mt-12 rounded" src="https://dashful.co/assets/img/features/iphone.png"></img>
+          <div className="mt-32 sm:flex sm:flex-row sm:items-center">
+            <div className="sm:pl-4">
+              <h4 className="ml-4 font-medium text-2xl text-gray-700">Responsive Design</h4>
+              <p className="mx-4 sm:mr-0 mt-2 text-sm sm:text-base text-gray-600">Dashboards adapt to any window or screen sizes so they can look good on any device. Be it your computer, phone, tablet or a TV.</p>
+            </div>
+            <div className="px-4 sm:pr-8">
+              <img className="mt-12 sm:w-176 rounded" src="https://dashful.co/assets/img/features/iphone.png"></img>
             </div>
           </div>
         </section>
         <section id="roadmap" className="px-4 py-16 bg-gray-100 text-center">
-          <h2 className="text-3xl font-medium">Roadmap</h2>
-          <p className="mt-4 text-gray-700">Coming soon...</p>
+          <h2 className="text-3xl sm:text-4xl font-medium">Roadmap</h2>
+          <p className="mt-4 text-gray-700 sm:text-lg">Coming soon...</p>
 
-          <h5 className="mt-16 text-lg font-semibold opacity-65">Custom Domains</h5>
-          <p className="text-sm">Host your dashboards on custom domains.</p>
-
-          <h5 className="mt-16 text-lg font-semibold opacity-65">Email &amp; Slack Reports</h5>
-          <p className="text-sm">Get dashboard snapshots into your mailbox or Slack channel.</p>
-
-          <h5 className="mt-16 text-lg font-semibold opacity-65">Historical Data</h5>
-          <p className="text-sm">Check data from the past and see how you've grown.</p>
-
-          <h5 className="mt-16 text-lg font-semibold opacity-65">API Access</h5>
-          <p className="text-sm">Get data presented in your dashboards in JSON format via API.</p>
-
-          <h5 className="mt-16 text-lg font-semibold opacity-65">More Integrations</h5>
-          <p className="text-sm">Widgets with connections to web services like Google Analytics, Stripe, <s>Intercom</s> and others.</p>
-
-          <h5 className="mt-16 text-lg font-semibold opacity-65">More Widgets</h5>
-          <p className="text-sm">World time, <s>iframe</s>, <s>rich text notes</s>, ...</p>
+          <div className="sm:px-8 sm:flex sm:flex-row sm:flex-wrap">
+            <div className="pr-6 w-1/2">
+              <h5 className="mt-16 text-lg sm:text-xl font-semibold opacity-65 sm:opacity-75">Custom Domains</h5>
+              <p className="sm:mt-3 text-sm sm:text-base sm:opacity-50">Host your dashboards on custom domains.</p>
+            </div>
+            <div className="pr-6 w-1/2">
+              <h5 className="mt-16 text-lg sm:text-xl font-semibold opacity-65 sm:opacity-75">Email &amp; Slack Reports</h5>
+              <p className="sm:mt-3 text-sm sm:text-base sm:opacity-50">Get dashboard snapshots into your mailbox or Slack channel.</p>
+            </div>
+            <div className="pr-6 w-1/2">
+              <h5 className="mt-16 text-lg sm:text-xl font-semibold opacity-65 sm:opacity-75">Historical Data</h5>
+              <p className="sm:mt-3 text-sm sm:text-base sm:opacity-50">Check data from the past and see how you've grown.</p>
+            </div>
+            <div className="pr-6 w-1/2">
+              <h5 className="mt-16 text-lg sm:text-xl font-semibold opacity-65 sm:opacity-75">API Access</h5>
+              <p className="sm:mt-3 text-sm sm:text-base sm:opacity-50">Get data presented in your dashboards in JSON format via API.</p>
+            </div>
+            <div className="pr-6 w-1/2">
+              <h5 className="mt-16 text-lg sm:text-xl font-semibold opacity-65 sm:opacity-75">More Integrations</h5>
+              <p className="sm:mt-3 text-sm sm:text-base sm:opacity-50">Widgets with connections to web services like Google Analytics, Stripe, <s>Intercom</s> and others.</p>
+            </div>
+            <div className="pr-6 w-1/2">
+              <h5 className="mt-16 text-lg sm:text-xl font-semibold opacity-65 sm:opacity-75">More Widgets</h5>
+              <p className="sm:mt-3 text-sm sm:text-base sm:opacity-50">World time, <s>iframe</s>, <s>rich text notes</s>, ...</p>
+            </div>
+          </div>
         </section>
         <section className="px-4 pt-16 pb-24 text-center">
-          <h2 className="text-3xl font-medium">What customers say about us</h2>
+          <h2 className="text-3xl sm:text-4xl font-medium">What customers say about us</h2>
 
-          <p className="mt-24 px-4 text-lg text-gray-600 leading-relaxed">&ldquo; Dashful has been an incredible addition to our toolset. By constantly using it to monitor our indicators it has allowed us to swiftly react to any sudden changes in all areas of our business. &rdquo;</p>
-          <p className="mt-4 text-sm text-gray-600">
-            - Fermin Rodriguez P. - <a href="#" target="new"><strong>lookea.me</strong></a>
-          </p>
-
-          <p className="mt-16 px-4 text-lg text-gray-600 leading-relaxed">&ldquo; Dashful makes it very easy to build new dashboards for our projects. The product allows us to concentrate on what matters: extract meaningful insights for our team - and the product support is outstanding! &rdquo;</p>
-          <p className="mt-4 text-sm text-gray-600">
-            - Carlos Martinez - <a href="#" target="new"><strong>wizeline.com</strong></a>
-          </p>
+          <div className="sm:flex sm:flex-row">
+            <div className="sm:w-1/2 sm:pl-8 sm:pr-6">
+              <p className="mt-24 sm:mt-20 px-4 text-lg sm:text-xl sm:font-light text-gray-600 leading-relaxed">&ldquo; Dashful has been an incredible addition to our toolset. By constantly using it to monitor our indicators it has allowed us to swiftly react to any sudden changes in all areas of our business. &rdquo;</p>
+              <p className="mt-4 text-sm sm:text-base text-gray-600">
+                - Fermin Rodriguez P. - <a href="#" target="new"><strong>lookea.me</strong></a>
+              </p>
+            </div>
+            <div className="sm:w-1/2 sm:pl-6 sm:pr-8">
+              <p className="mt-16 sm:mt-20 px-4 text-lg sm:text-xl sm:font-light text-gray-600 leading-relaxed">&ldquo; Dashful makes it very easy to build new dashboards for our projects. The product allows us to concentrate on what matters: extract meaningful insights for our team - and the product support is outstanding! &rdquo;</p>
+              <p className="mt-4 text-sm sm:text-base text-gray-600">
+                - Carlos Martinez - <a href="#" target="new"><strong>wizeline.com</strong></a>
+              </p>
+            </div>
+          </div>
         </section>
         <section className="px-4 py-16 bg-gray-100">
-          <h2 className="text-3xl font-medium text-center">Try it yourself. No account required!</h2>
+          <h2 className="text-3xl sm:text-4xl font-medium text-center">Try it yourself. No account required!</h2>
           <div className="mt-24 flex justify-center">
-            <a className="ml-4 mt-6 px-6 py-2 inline-block rounded-full bg-purple-600 text-white uppercase" href="#">
-              Start Building Dashboard
+            <a className="mt-3 pl-6 py-2 inline-block rounded-full bg-purple-600 text-white uppercase" href="#">
+              <span>Start Building Dashboard</span>
+              <svg className="ml-4 mr-2 inline-block relative right-0" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 512 512">
+                <title>ionicons-v5-a</title>
+                <polyline className="stroke-current" points="262.62 336 342 256 262.62 176" style={{fill:'none',strokeLinecap:'round',strokeLinejoin:'round',strokeWidth:'48px'}}/>
+                <line className="stroke-current" x1="330.97" y1="256" x2="170" y2="256" style={{fill:'none',strokeLinecap:'round',strokeLinejoin:'round',strokeWidth:'48px'}}/>
+                <path className="stroke-current" d="M256,448c106,0,192-86,192-192S362,64,256,64,64,150,64,256,150,448,256,448Z" style={{fill:'none',strokeMiterlimit:10,strokeWidth:'42px'}}/>
+              </svg>
             </a>
           </div>
         </section>
         <section className="px-4 py-20">
-          <p className="text-gray-600 text-center">Subscribe to newsletter and receive the latest news.</p>
-          <div className="mt-4 flex flex-row relative">
-            <input className="pl-4 py-2 rounded-l-full border border-r-0 border-gray-200" placeholder="Email Address"></input>
+          <p className="text-gray-600 text-center sm:text-xl">Subscribe to newsletter and receive the latest news.</p>
+          <div className="mt-4 mx-auto sm:mt-8 sm:w-128 flex flex-row relative">
+            <input className="pl-4 py-2 w-full rounded-l-full border border-r-0 border-gray-200 sm:border-gray-400" placeholder="Email Address"></input>
             <button className="px-6 py-2 h-full absolute right-0 rounded-full bg-purple-600 align-middle text-white text-sm font-semibold tracking-wider uppercase leading-none">Subscribe</button>
           </div>
         </section>
         <section className="px-4 py-16 bg-gray-100 text-center">
-          <h2 className="text-3xl font-medium">Who made this?</h2>
+          <h2 className="text-3xl sm:text-4xl font-medium">Who made this?</h2>
           <p className="mt-24 px-4 text-lg text-gray-600 leading-relaxed">I'm a solo developer and I made this to "scratch my own itch". I've worked on this for months and months and I love ❤️ to see what you're creating with this platform. Thank you for your support!</p>
           <p className="mt-12 text-sm text-gray-600">
             Adam - <a href="#">Twitter</a>
