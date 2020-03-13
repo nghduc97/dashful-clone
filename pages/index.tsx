@@ -20,27 +20,41 @@ function IndexPage(props) {
         </div>
         <button onClick={() => setMenuOpen(false)} className="flex-grow bg-white opacity-95"></button>
       </div>
-      <nav className="py-1 flex items-center bg-purple-600 text-white">
-        <button onClick={() => setMenuOpen(true)} className="ml-4 sm:ml-8 p-2 text-xl opacity-65" type="button">☰</button>
-        <h1 className="ml-4">
-          <img className="ml-1" src="https://dashful.co/assets/img/logo.png" alt="logo" width="100" height="30"></img>
+      <nav className="py-1 lg:py-2 flex items-center lg:justify-between bg-purple-600 text-white">
+        <button onClick={() => setMenuOpen(true)} className="ml-4 sm:ml-8 p-2 lg:hidden text-xl opacity-65" type="button">☰</button>
+        <h1 className="ml-4 lg:ml-24">
+          <img className="ml-1 lg:ml-0" src="https://dashful.co/assets/img/logo.png" alt="logo" width="100" height="30"></img>
         </h1>
+        <nav className="hidden lg:flex text-gray-200">
+          <a href="#" className="px-4 py-3 font-mono uppercase font-bold tracking-wider">Home</a>
+          <a href="#" className="px-4 py-3 font-mono uppercase tracking-wider">Widgets</a>
+          <a href="#" className="px-4 py-3 font-mono uppercase tracking-wider">Features</a>
+          <a href="#" className="px-4 py-3 font-mono uppercase tracking-wider">Pricing</a>
+          <a href="#" className="px-4 py-3 font-mono uppercase tracking-wider">Live Demo</a>
+          <div className="ml-6 flex items-center">
+            <button className="px-6 py-2 bg-white rounded-full text-xs tracking-wider text-purple-700 uppercase">Sign In</button>
+          </div>
+        </nav>
       </nav>
-      <header className="pt-24 h-screen bg-purple-600 text-white">
-        <h2 className="ml-4 sm:ml-10 sm:w-2/3 font-medium leading-10 sm:leading-tight text-4xl sm:text-4.5xl">Create Beautiful Dashboards</h2>
-        <p className="ml-4 sm:ml-10 mt-5 w-2/3 sm:w-5/6 sm:text-lg font-thin leading-relaxed overflow-visible">Get timely information about things that matter to you at a glance.</p>
-        <a className="ml-4 sm:ml-10 mt-6 pl-6 py-2 inline-block rounded-full bg-white text-purple-600" href="#">
-          <span className="font-medium tracking-widest text-xs">BUILD DASHBOARD</span>
-          <svg className="ml-4 mr-2 inline-block relative right-0" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 512 512">
-            <title>ionicons-v5-a</title>
-            <polyline className="stroke-current" points="262.62 336 342 256 262.62 176" style={{fill:'none',strokeLinecap:'round',strokeLinejoin:'round',strokeWidth:'48px'}}/>
-            <line className="stroke-current" x1="330.97" y1="256" x2="170" y2="256" style={{fill:'none',strokeLinecap:'round',strokeLinejoin:'round',strokeWidth:'48px'}}/>
-            <path className="stroke-current" d="M256,448c106,0,192-86,192-192S362,64,256,64,64,150,64,256,150,448,256,448Z" style={{fill:'none',strokeMiterlimit:10,strokeWidth:'42px'}}/>
-          </svg>
-        </a>
-        <p className="ml-12 sm:ml-20 mt-4 text-sm">No account required</p>
-        <div className="mt-2 flex justify-center">
-          <a href="#" target="_blank" className="w-9/10">
+      <header className="pt-24 lg:pt-12 h-screen lg:h-screen-7/10 lg:flex lg:flex-row bg-purple-600 text-white">
+        <div className="ml-4 sm:ml-10 lg:ml-24 lg:w-112 lg:flex lg:flex-col lg:justify-center">
+          <div>
+            <h2 className="sm:w-2/3 font-medium leading-10 sm:leading-tight text-4xl sm:text-4.5xl">Create Beautiful Dashboards</h2>
+            <p className="mt-5 w-2/3 sm:w-5/6 sm:text-lg font-thin leading-relaxed overflow-visible">Get timely information about things that matter to you at a glance.</p>
+            <a className="mt-6 pl-6 py-2 inline-block rounded-full bg-white text-purple-600" href="#">
+              <span className="font-medium tracking-widest text-xs">BUILD DASHBOARD</span>
+              <svg className="ml-4 mr-2 inline-block relative right-0" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 512 512">
+                <title>ionicons-v5-a</title>
+                <polyline className="stroke-current" points="262.62 336 342 256 262.62 176" style={{fill:'none',strokeLinecap:'round',strokeLinejoin:'round',strokeWidth:'48px'}}/>
+                <line className="stroke-current" x1="330.97" y1="256" x2="170" y2="256" style={{fill:'none',strokeLinecap:'round',strokeLinejoin:'round',strokeWidth:'48px'}}/>
+                <path className="stroke-current" d="M256,448c106,0,192-86,192-192S362,64,256,64,64,150,64,256,150,448,256,448Z" style={{fill:'none',strokeMiterlimit:10,strokeWidth:'42px'}}/>
+              </svg>
+            </a>
+            <p className="ml-2 sm:ml-6 mt-4 text-sm">No account required</p>
+          </div>
+        </div>
+        <div className="mt-2 lg:pt-12 flex justify-center">
+          <a href="#" target="_blank" className="w-9/10 lg:w-160">
             <img src="https://dashful.co/assets/img/dashboard-hero.png"></img>
           </a>
         </div>
