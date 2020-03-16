@@ -1,6 +1,9 @@
 module.exports = {
   theme: {
     extend: {
+      inset: {
+        '-4': '-1rem',
+      },
       fontSize: {
         '4.5xl': '2.625rem',
       },

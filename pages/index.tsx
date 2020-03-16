@@ -62,7 +62,7 @@ function IndexPage(props) {
       <main>
         <section className="pb-12">
           <h2 className="mx-8 my-12 text-center text-3xl sm:text-4xl text-teal-900 font-medium">Watch Dashful in action</h2>
-          <iframe className="w-full" src="https://www.youtube.com/embed/D37RXZsdVm8" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+          <iframe className="mx-auto w-full max-w-6xl" src="https://www.youtube.com/embed/D37RXZsdVm8" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
         </section>
         <section id="widgets" className="pt-16 bg-gray-100">
           <h2 className="text-center text-3xl sm:text-4xl text-teal-900 font-medium">Widget</h2>
@@ -74,7 +74,7 @@ function IndexPage(props) {
             <button className="px-3 py-1 rounded whitespace-no-wrap uppercase text-gray-600 font-bold text-xs">Custom</button>
             <button className="px-3 py-1 rounded whitespace-no-wrap uppercase text-gray-600 font-bold text-xs">Other</button>
           </nav>
-          <div className="mt-8 pb-16 mx-2 sm:mx-auto sm:max-w-2xl grid grid-cols-2 gap-2 sm:gap-4">
+          <div className="mt-8 pb-16 mx-2 sm:mx-auto sm:max-w-2xl lg:max-w-6xl grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-4">
             <WidgetCard
               imgLink="https://dashful.co/assets/img/widgets/youtube.png"
               title="YouTube"
@@ -249,27 +249,27 @@ function IndexPage(props) {
           <p className="mt-4 text-gray-700 sm:text-lg">Coming soon...</p>
 
           <div className="sm:px-8 sm:flex sm:flex-row sm:flex-wrap">
-            <div className="pr-6 w-1/2">
+            <div className="pr-6 w-1/2 lg:w-1/3">
               <h5 className="mt-16 text-lg sm:text-xl font-semibold opacity-65 sm:opacity-75">Custom Domains</h5>
               <p className="sm:mt-3 text-sm sm:text-base sm:opacity-50">Host your dashboards on custom domains.</p>
             </div>
-            <div className="pr-6 w-1/2">
+            <div className="pr-6 w-1/2 lg:w-1/3">
               <h5 className="mt-16 text-lg sm:text-xl font-semibold opacity-65 sm:opacity-75">Email &amp; Slack Reports</h5>
               <p className="sm:mt-3 text-sm sm:text-base sm:opacity-50">Get dashboard snapshots into your mailbox or Slack channel.</p>
             </div>
-            <div className="pr-6 w-1/2">
+            <div className="pr-6 w-1/2 lg:w-1/3">
               <h5 className="mt-16 text-lg sm:text-xl font-semibold opacity-65 sm:opacity-75">Historical Data</h5>
               <p className="sm:mt-3 text-sm sm:text-base sm:opacity-50">Check data from the past and see how you've grown.</p>
             </div>
-            <div className="pr-6 w-1/2">
+            <div className="pr-6 w-1/2 lg:w-1/3">
               <h5 className="mt-16 text-lg sm:text-xl font-semibold opacity-65 sm:opacity-75">API Access</h5>
               <p className="sm:mt-3 text-sm sm:text-base sm:opacity-50">Get data presented in your dashboards in JSON format via API.</p>
             </div>
-            <div className="pr-6 w-1/2">
+            <div className="pr-6 w-1/2 lg:w-1/3">
               <h5 className="mt-16 text-lg sm:text-xl font-semibold opacity-65 sm:opacity-75">More Integrations</h5>
               <p className="sm:mt-3 text-sm sm:text-base sm:opacity-50">Widgets with connections to web services like Google Analytics, Stripe, <s>Intercom</s> and others.</p>
             </div>
-            <div className="pr-6 w-1/2">
+            <div className="pr-6 w-1/2 lg:w-1/3">
               <h5 className="mt-16 text-lg sm:text-xl font-semibold opacity-65 sm:opacity-75">More Widgets</h5>
               <p className="sm:mt-3 text-sm sm:text-base sm:opacity-50">World time, <s>iframe</s>, <s>rich text notes</s>, ...</p>
             </div>
@@ -308,10 +308,12 @@ function IndexPage(props) {
           </div>
         </section>
         <section className="px-4 py-20">
-          <p className="text-gray-600 text-center sm:text-xl">Subscribe to newsletter and receive the latest news.</p>
-          <div className="mt-4 mx-auto sm:mt-8 sm:w-128 flex flex-row relative">
-            <input className="pl-4 py-2 w-full rounded-l-full border border-r-0 border-gray-200 sm:border-gray-400" placeholder="Email Address"></input>
-            <button className="px-6 py-2 h-full absolute right-0 rounded-full bg-purple-600 align-middle text-white text-sm font-semibold tracking-wider uppercase leading-none">Subscribe</button>
+          <div className="lg:mx-auto lg:max-w-6xl lg:flex lg:flex-row lg:justify-between">
+            <p className="text-gray-600 text-center sm:text-xl lg:font-light">Subscribe to newsletter and receive the latest news.</p>
+            <div className="mt-4 mx-auto sm:mt-8 lg:mt-0 lg:mx-0 sm:w-128 lg:w-76 flex flex-row relative">
+              <input className="pl-4 py-2 w-full rounded-l-full border border-r-0 border-gray-200 sm:border-gray-400" placeholder="Email Address"></input>
+              <button className="px-6 py-2 h-full absolute -right-4 rounded-full bg-purple-600 align-middle text-white text-sm font-semibold tracking-wider uppercase leading-none">Subscribe</button>
+            </div>
           </div>
         </section>
         <section className="px-4 py-16 sm:px-8 sm:pb-20 bg-gray-100 text-center">
@@ -321,42 +323,46 @@ function IndexPage(props) {
             Adam - <a href="#">Twitter</a>
           </p>
         </section>
-        <footer className="px-4 pt-8 pb-12 sm:px-10 sm:pt-12 bg-gray-900 text-white">
-          <img className="" src="https://dashful.co/assets/img/logo.png" alt="logo" width="100" height="30"></img>
-          <p className="mt-4 text-sm sm:text-base sm:text-gray-400">A platform to create beautiful and customizable dashboards.</p>
-          <div className="mt-4 flex">
-            <a href="#" className="p-2 block bg-gray-800 rounded">
-              <svg className="text-gray-500 fill-current" xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 512 512'><title>ionicons-v5_logos</title><path d='M496,109.5a201.8,201.8,0,0,1-56.55,15.3,97.51,97.51,0,0,0,43.33-53.6,197.74,197.74,0,0,1-62.56,23.5A99.14,99.14,0,0,0,348.31,64c-54.42,0-98.46,43.4-98.46,96.9a93.21,93.21,0,0,0,2.54,22.1,280.7,280.7,0,0,1-203-101.3A95.69,95.69,0,0,0,36,130.4C36,164,53.53,193.7,80,211.1A97.5,97.5,0,0,1,35.22,199v1.2c0,47,34,86.1,79,95a100.76,100.76,0,0,1-25.94,3.4,94.38,94.38,0,0,1-18.51-1.8c12.51,38.5,48.92,66.5,92.05,67.3A199.59,199.59,0,0,1,39.5,405.6,203,203,0,0,1,16,404.2,278.68,278.68,0,0,0,166.74,448c181.36,0,280.44-147.7,280.44-275.8,0-4.2-.11-8.4-.31-12.5A198.48,198.48,0,0,0,496,109.5Z'/></svg>
-            </a>
-            <a href="#" className="ml-2 p-2 block bg-gray-800 rounded">
-              <svg className="text-gray-500 fill-current" xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 512 512'><title>ionicons-v5_logos</title><path d='M508.64,148.79c0-45-33.1-81.2-74-81.2C379.24,65,322.74,64,265,64H247c-57.6,0-114.2,1-169.6,3.6-40.8,0-73.9,36.4-73.9,81.4C1,184.59-.06,220.19,0,255.79q-.15,53.4,3.4,106.9c0,45,33.1,81.5,73.9,81.5,58.2,2.7,117.9,3.9,178.6,3.8q91.2.3,178.6-3.8c40.9,0,74-36.5,74-81.5,2.4-35.7,3.5-71.3,3.4-107Q512.24,202.29,508.64,148.79ZM207,353.89V157.39l145,98.2Z'/></svg>
-            </a>
-          </div>
-          <hr className="mt-8 border-gray-700 opacity-75" />
-          <div className="mt-8 w-2/3 grid grid-cols-2 row-gap-2 text-sm sm:text-base text-gray-400">
-            <a href="#">Home</a>
-            <a href="#widgets">Widgets</a>
-            <a href="#">Live Demo</a>
-            <a href="#features">Features</a>
-            <a href="#">Changelog</a>
-            <a href="#roadmap">Roadmap</a>
-            <a href="#">Terms</a>
-            <a href="#">Credits</a>
-            <a href="#">Privacy</a>
-            <a href="#">Pricing</a>
-          </div>
-          <div className="mt-8">
-            <h6 className="sm:text-lg">Get Started</h6>
-            <p className="mt-2 text-sm sm:text-base text-gray-400 leading-relaxed">No account required unless you want to ​​​​​​​save your dashboard.</p>
-            <a className="mt-3 sm:mt-4 pl-6 py-2 inline-block rounded-full bg-purple-600 text-white" href="#">
-              <span className="font-medium tracking-widest text-xs">BUILD DASHBOARD</span>
-              <svg className="ml-4 mr-2 inline-block relative right-0" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 512 512">
-                <title>ionicons-v5-a</title>
-                <polyline className="stroke-current" points="262.62 336 342 256 262.62 176" style={{fill:'none',strokeLinecap:'round',strokeLinejoin:'round',strokeWidth:'48px'}}/>
-                <line className="stroke-current" x1="330.97" y1="256" x2="170" y2="256" style={{fill:'none',strokeLinecap:'round',strokeLinejoin:'round',strokeWidth:'48px'}}/>
-                <path className="stroke-current" d="M256,448c106,0,192-86,192-192S362,64,256,64,64,150,64,256,150,448,256,448Z" style={{fill:'none',strokeMiterlimit:10,strokeWidth:'42px'}}/>
-              </svg>
-            </a>
+        <footer className="px-4 pt-8 pb-12 sm:px-10 sm:pt-12 lg:px-0 lg:pb-24 bg-gray-900 text-white">
+          <div className="mx-auto max-w-6xl lg:flex lg:flex-row">
+            <div>
+              <img className="" src="https://dashful.co/assets/img/logo.png" alt="logo" width="100" height="30"></img>
+              <p className="mt-4 text-sm sm:text-base sm:text-gray-400">A platform to create beautiful and customizable dashboards.</p>
+              <div className="mt-4 flex">
+                <a href="#" className="p-2 block bg-gray-800 rounded">
+                  <svg className="text-gray-500 fill-current" xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 512 512'><title>ionicons-v5_logos</title><path d='M496,109.5a201.8,201.8,0,0,1-56.55,15.3,97.51,97.51,0,0,0,43.33-53.6,197.74,197.74,0,0,1-62.56,23.5A99.14,99.14,0,0,0,348.31,64c-54.42,0-98.46,43.4-98.46,96.9a93.21,93.21,0,0,0,2.54,22.1,280.7,280.7,0,0,1-203-101.3A95.69,95.69,0,0,0,36,130.4C36,164,53.53,193.7,80,211.1A97.5,97.5,0,0,1,35.22,199v1.2c0,47,34,86.1,79,95a100.76,100.76,0,0,1-25.94,3.4,94.38,94.38,0,0,1-18.51-1.8c12.51,38.5,48.92,66.5,92.05,67.3A199.59,199.59,0,0,1,39.5,405.6,203,203,0,0,1,16,404.2,278.68,278.68,0,0,0,166.74,448c181.36,0,280.44-147.7,280.44-275.8,0-4.2-.11-8.4-.31-12.5A198.48,198.48,0,0,0,496,109.5Z'/></svg>
+                </a>
+                <a href="#" className="ml-2 p-2 block bg-gray-800 rounded">
+                  <svg className="text-gray-500 fill-current" xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 512 512'><title>ionicons-v5_logos</title><path d='M508.64,148.79c0-45-33.1-81.2-74-81.2C379.24,65,322.74,64,265,64H247c-57.6,0-114.2,1-169.6,3.6-40.8,0-73.9,36.4-73.9,81.4C1,184.59-.06,220.19,0,255.79q-.15,53.4,3.4,106.9c0,45,33.1,81.5,73.9,81.5,58.2,2.7,117.9,3.9,178.6,3.8q91.2.3,178.6-3.8c40.9,0,74-36.5,74-81.5,2.4-35.7,3.5-71.3,3.4-107Q512.24,202.29,508.64,148.79ZM207,353.89V157.39l145,98.2Z'/></svg>
+                </a>
+              </div>
+            </div>
+            <hr className="mt-8 lg:hidden border-gray-700 opacity-75" />
+            <div className="mt-8 lg:mt-12 w-2/3 lg:w-1/3 grid grid-cols-2 row-gap-2 text-sm sm:text-base text-gray-400">
+              <a href="#">Home</a>
+              <a href="#widgets">Widgets</a>
+              <a href="#">Live Demo</a>
+              <a href="#features">Features</a>
+              <a href="#">Changelog</a>
+              <a href="#roadmap">Roadmap</a>
+              <a href="#">Terms</a>
+              <a href="#">Credits</a>
+              <a href="#">Privacy</a>
+              <a href="#">Pricing</a>
+            </div>
+            <div className="mt-8 lg:mt-12">
+              <h6 className="sm:text-lg">Get Started</h6>
+              <p className="mt-2 text-sm sm:text-base text-gray-400 leading-relaxed">No account required unless you want to ​​​​​​​save your dashboard.</p>
+              <a className="mt-3 sm:mt-4 pl-6 py-2 inline-block rounded-full bg-purple-600 text-white" href="#">
+                <span className="font-medium tracking-widest text-xs">BUILD DASHBOARD</span>
+                <svg className="ml-4 mr-2 inline-block relative right-0" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 512 512">
+                  <title>ionicons-v5-a</title>
+                  <polyline className="stroke-current" points="262.62 336 342 256 262.62 176" style={{fill:'none',strokeLinecap:'round',strokeLinejoin:'round',strokeWidth:'48px'}}/>
+                  <line className="stroke-current" x1="330.97" y1="256" x2="170" y2="256" style={{fill:'none',strokeLinecap:'round',strokeLinejoin:'round',strokeWidth:'48px'}}/>
+                  <path className="stroke-current" d="M256,448c106,0,192-86,192-192S362,64,256,64,64,150,64,256,150,448,256,448Z" style={{fill:'none',strokeMiterlimit:10,strokeWidth:'42px'}}/>
+                </svg>
+              </a>
+            </div>
           </div>
         </footer>
       </main>
